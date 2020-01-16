@@ -1,0 +1,66 @@
+        // try {
+        //     await conn.query('START TRANSACTION');
+        //     const result1 = await conn.query (`select * from \`registration\` where \`email\` = ?`,
+        //     [body.email], (error, results) =>{
+        //             if (error) {
+        //                 console.log(error);
+        //             }
+        //             if (!results) {
+        //             return res.json({
+        //                 success: 0,
+        //                 data: "Invalid email or password 1"
+        //             });        
+        //             });
+
+        // }
+        //  
+        //     await conn.query('COMMIT');  
+        //     if(err){
+                
+        //     }
+
+        //     const results = compareSync(body.password, result.password);
+        //     if (results) {
+        //     result.password = undefined;
+        //     const jsontoken = sign({ results: result }, "qwe1234", {
+        //         expiresIn: "1h"
+        //     });
+        //     return res.json({
+        //         success: 1,
+        //         message: "login successfully",
+        //         token: jsontoken
+        //     });
+        //     } else {
+        //     return res.json({
+        //         success: 0,
+        //         data: "Invalid email or password"
+        //     });
+        //     }       
+        // //   res.status(200).json({
+        // //     success: 1,
+        // //     data: result
+        // //   });
+        // } catch (err) {
+        //   res.json({
+        //     error: err,
+        //   });
+        // } finally {
+        //   await conn.release();
+        //   await conn.destroy();
+        // }
+        
+      
+    //   },
+
+
+CREATE TABLE registration(
+  id INT NOT NULL AUTO_INCREMENT,
+  lastName varchar(255) NOT NULL,
+  firstName varchar(255) NOT NULL,
+  gender varchar(50) NOT NULL,
+  email varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  number BIGINT NOT NULL,
+  otp MEDIUMINT NOT NULL,
+  PRIMARY KEY (id)
+);
