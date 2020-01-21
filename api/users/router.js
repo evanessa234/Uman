@@ -6,18 +6,21 @@ const {
   getUserByUserId,
   getUsers,
   updateUsers,
-  deleteUser
+  deleteUser,
+  bonofide,
 } = require("./controller");
 
 
-router.get("/", checkToken, getUsers);
+// router.get("/", checkToken, getUsers);
 router.post("/hi", createUser); 
 router.post("/login", login);
 
-router.get("/:id", checkToken, getUserByUserId);
+// router.get("/:id", checkToken, getUserByUserId);
 
 router.patch("/", checkToken, updateUsers);
 router.delete("/", checkToken, deleteUser);
+////////
+router.get("/bonofide", bonofide);
 
 module.exports = router;
 

@@ -1,3 +1,65 @@
+
+connection = mysql.createConnection('mysql://user:pass@host/db?debug=true&charset=BIG5_CHINESE_CI&timezone=-0700');       
+       
+       
+       
+       
+        const result = `select exists (select * from accepted_app where rollno = '${rollNo}')`;
+        console.log(result)
+        // if (`exists (select * from accepted_app where rollno = '${rollNo}')`){
+        //   console.log("1");
+        // }
+        // else if (`exists (select * from dropstudent where rollno = '${rollNo}')`){
+        //   console.log("2");
+        // }
+
+      //   if(`SELECT EXISTS(select * from accepted_app where rollno = '${rollNo}')`){
+      //     const result = await conn.query(`select * from accepted_app where rollno = ?`,[rollNo]);
+      //     {
+      //         res.status(200).json({
+      //               success: 1, 
+      //               data: result,
+      //               code: 1,
+      //           });
+      //   }
+      // }
+      // else if(`SELECT EXISTS(select * from dropstudent where rollno = '${rollNo}')`){
+      //   const result = await conn.query(`select * from dropstudent where rollno = ?`,[rollNo]);
+      //   {
+      //       res.status(200).json({
+      //         success: 1, 
+      //         data: result
+      //     });
+      //   }
+      // }
+        // const result = await conn.query()
+        // const result = 0;
+      
+        // if(result = await conn.query(`select * from \`student_bkup_02_jul_18\` where \`rollno\`='${rollNo}'`))
+        // {
+        //   res.status(200).json({
+        //         success: 1, 
+        //         data: result
+        //     });
+        // }
+        // const result = await conn.query(`select * from \`student_bkup_02_jul_18\` where \`rollno\`=?`,[rollNo]
+        // `and
+        // select * from \`rejected_app\` where \`rollno\`= ?`,[rollNo]);
+      //   const result = await conn.query(`select * from \`rejected_app\` where \`rollno\`=? union all select * from \`accepted_app\` where \`rollno\` = ? union all select * from \`student_bkup_02_jul_18\` where \`rollno\`=?`,
+      //   [rollNo,
+      //   rollNo,
+      //   rollNo
+      // ]
+      //   );
+
+
+        // uncomment later
+        // res.status(200).json({
+        //     success: 1, 
+        //     data: result
+        // });
+
+        
         // try {
         //     await conn.query('START TRANSACTION');
         //     const result1 = await conn.query (`select * from \`registration\` where \`email\` = ?`,
